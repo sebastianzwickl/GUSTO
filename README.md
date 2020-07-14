@@ -28,7 +28,7 @@ Furthermore, this modeling framework enables the following **operational strateg
 The total costs of energy supply in the system concerned are calculated and can are split as follows: invest, fixed, variable, fuel, external, 
 reveneue, purchase (see after running the model `./Output/scenario_name_folder/scenario_name`) in the sheet `Costs` of the excel results file. Many thanks to the visualization tool [pyam](https://github.com/IAMconsortium/pyam) that is used for the results presentation.
 
-Also, the utilization of energy technologies are illustrated in the results file and as images (i.e. temporal utilization of photovoltaics). 
+Also, the utilization of energy technologies are illustrated in the results file and as images (i.e. temporal utilization of photovoltaics). These required results can be adjusted in the `run_model.py` script (i.e. `report_tuple` and `plot_tuple`).
 
 <img src="./_static/High_Temporal_Resolution.png" width="800" heigth="300" align="center">
 

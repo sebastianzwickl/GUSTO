@@ -1,4 +1,4 @@
-name: urbs
+name: gusto
 channels:
   - defaults
   - conda-forge

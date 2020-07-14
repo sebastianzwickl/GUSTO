@@ -36,7 +36,7 @@ Also, the utilization of energy technologies are illustrated in the results file
 At this point it is again pointed out that this model is an extension of the existing open-source model **urbs**. The corresponding  [repository](https://github.com/tum-ens/urbs) contains a very detailed documentation and instructions for installation which can be referred to. However, the following steps might be the quickest path to get first results of the model and is also pointed out in the reffered repository. Thereby, a new environment is created (more details about virtual environments [here](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)).
 
 1. Download and install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) for your machine (keep both checkboxes "modify PATH" and "register Python" selected).
-2. Download the environment file which contains the required packages and corresponding versions (more experienced Python users know the advantages and disadvantages of this but these are not so relevant for a first step towards model results).
+2. Download the [environment file](https://github.com/sebastianzwickl/GUSTO/blob/master/gusto-env.yml) which contains the required packages and corresponding versions (more experienced Python users know the advantages and disadvantages of this but these are not so relevant for a first step towards model results).
 3. Launch a new command prompt (Windows: Win+R, type "cmd", Enter)
 4. Install the requirements via Miniconda by `conda env create -f gusto-env.yml`.
 5. Each time you open a new terminal (like Anaconda Prompt (miniconda3)) activate the environment by `conda activate gusto`.

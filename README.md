@@ -14,6 +14,17 @@ GUSTO is a mixed-integer linear program (MILP) for energy system modeling. Thank
 - Different operational strategies of storage technologies
 - Clustering algorithm for characteristic week representation to reduce simulation running time[[2]](#2).
 
+## What are the objectives:
+Different objective functions are possible. The default objective function is to minimize total costs of supply per year. In addition, the existing model also enables minimization of total emissions per year.
+Furthermore, this modeling framework enables the following **operational strategies for storage** technologies.  
+1. profit maximization by single consumers, communities, or companies
+2. minimization of local excess/deficit by prosumers
+3. load following by using battery storage capacities (this includes dumb or smart EV charging)
+
+## What are the results:
+![](_static/Shares_Total_Costs.png)
+
+
 ## References
 <a id="1">[1]</a> 
 Dorfner, J., and T. Hamacher (2017)

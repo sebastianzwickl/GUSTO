@@ -22,7 +22,12 @@ Furthermore, this modeling framework enables the following **operational strateg
 3. load following by using battery storage capacities (this includes dumb or smart EV charging)
 
 ## What are the results:
-![](_static/Shares_Total_Costs.png)
+The total costs of energy supply in the system concerned are calculated and can are split as follows: invest, fixed, variable, fuel, external, reveneue, purchase (see after running the model `./Output/scenario_name_folder/scenario_name`) in the sheet `Costs` of the excel results file. Many thanks to the visualization tool [pyam](https://github.com/IAMconsortium/pyam) that is used for the results presentation.
+
+<img src="./_static/Shares_Total_Costs.png" width="300" heigth="300" align="right">
+
+Also, the utilization of energy technologies are illustrated in the results file and as images (i.e. temporal utilization of photovoltaics). 
+
 
 
 ## References

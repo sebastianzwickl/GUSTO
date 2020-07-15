@@ -66,12 +66,6 @@ def generate_demand_sheet(fn1, fn2, fn3):
     return
 
 
-# write t value to excel file for better input to model 
-def write_t(name,sheet):
-
-# write t value to excel file for better input to urbs
-def write_t(name, sheet):
-
 # write t value to excel file for better input to model
 def write_t(name, sheet):
     wb = load_workbook(name)
@@ -96,7 +90,7 @@ def generate_e_sheet(fn1):
 
 
 def plot_ts_and_cluster(result, source, string):
-    # result: matrix of clustered ts
+    # result: matrix of clustering annual timeseries
     # source 52 weeks input data
     global g
     length = range(hours)

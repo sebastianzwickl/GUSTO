@@ -10,7 +10,7 @@ import os
 """ parameter """
 # get file 
 file = 'Annual_timeseries.xlsx'
-# define sites (Viertel2, WU, Stadion, Neubau)
+# define sites (i.e. Site1, Site2, Site3, Site4)
 sites = 4
 # define types (Elec, Heat, Cold, Solar, Heat Pump Efficiency)
 types = 5
@@ -37,7 +37,7 @@ def reshape_timeserie(cv):
     return np.reshape(cv,(hours, weeks))
 
 
-# plot time serie, input is matrix to plot and number of columns
+# plot time serie, input: matrix and number of columns
 def plot_timeseries(matrix, c):
     length=range(hours)
     plt.figure(figsize = (16,9))
@@ -56,7 +56,7 @@ def sort_one_type(matrix):
     return np.reshape(matrix, (hours, sites*weeks), order='F')
 
 
-# generates demand sheet "Demand_Final.xlsx"
+# generate demand sheet "Demand_Final.xlsx"
 def generate_demand_sheet(fn1, fn2, fn3):
     elec = pd.read_excel(fn1)
     heat = pd.read_excel(fn2)
@@ -66,7 +66,7 @@ def generate_demand_sheet(fn1, fn2, fn3):
     return
 
 
-# write t value to excel file for better input to urbs 
+# write t value to excel file for better input to model 
 def write_t(name,sheet):
     wb = load_workbook(name)
     ws = wb[sheet]
@@ -75,7 +75,7 @@ def write_t(name,sheet):
     wb.close()
 
 
-# generates solar sheet "Solar_Final.xlsx"   
+# generate solar sheet "Solar_Final.xlsx"   
 def generate_solar_sheet(fn1):
     solar = pd.read_excel(fn1)
     solar.to_excel("Solar_Final.xlsx", sheet_name='SupIm')
@@ -83,7 +83,6 @@ def generate_solar_sheet(fn1):
     return 
 
 
-# generates solar sheet "Solar_Final.xlsx" 
 def generate_e_sheet(fn1):
     solar = pd.read_excel(fn1)
     solar.to_excel("TimeVarEff_Final.xlsx", sheet_name='TimeVarEff')
@@ -132,17 +131,13 @@ cold = sort_one_type(cv[:, 2*sites:3*sites])
 solar = sort_one_type(cv[:, 3*sites:4*sites])
 e = sort_one_type(cv[:, 4*sites:5*sites])
 
-""" 
-matrix for kmeans need (n x p) with n samples (52 weeks x 4 sites = 208)
-and p features (168h * 5 types = 840)
-"""
 
 matrix_all = np.concatenate((elec, heat, cold, solar, e), axis = 0)
 matrix_to_kmeans = np.transpose(matrix_all)
 
 current_dir = os.path.dirname(__file__)
 
-# edit number of clusters to represent yearly timeseries
+# edit number of clusters to represent annual timeseries
 for g in range(1):
     g = g+3
     try:

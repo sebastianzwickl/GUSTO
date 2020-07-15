@@ -79,7 +79,6 @@ del[bold, workbook, worksheet, index, length, row,
     model_name, file_excel, fn, tstemp, df, name_files]
 
 
-
 df = pd.read_excel('GUSTO_results.xlsx')
 df = pyam.IamDataFrame(df, encoding='utf-8')
 print(df.head())

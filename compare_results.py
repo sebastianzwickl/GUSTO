@@ -141,7 +141,7 @@ def compare_scenarios(result_files, output_filename):
 
             # extract sites and commodities from scenario
             # sitcom = [value.split('.') for value
-                # in esum.columns.get_level_values(0)]
+            # in esum.columns.get_level_values(0)]
             com_sums = pd.DataFrame()
             sit_com = esum.columns.get_level_values(0)
 

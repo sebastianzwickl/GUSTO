@@ -66,36 +66,28 @@ def generate_demand_sheet(fn1, fn2, fn3):
     return
 
 
-<<<<<<< HEAD
 # write t value to excel file for better input to model 
 def write_t(name,sheet):
-=======
+
 # write t value to excel file for better input to urbs
 def write_t(name, sheet):
->>>>>>> add_files_branch
+
+# write t value to excel file for better input to model
+def write_t(name, sheet):
     wb = load_workbook(name)
     ws = wb[sheet]
     ws['A1'].value = 't'
     wb.save(name)
     wb.close()
 
-
-<<<<<<< HEAD
-# generate solar sheet "Solar_Final.xlsx"   
-=======
-# generates solar sheet "Solar_Final.xlsx"
->>>>>>> add_files_branch
+# generate solar sheet "Solar_Final.xlsx"
 def generate_solar_sheet(fn1):
     solar = pd.read_excel(fn1)
     solar.to_excel("Solar_Final.xlsx", sheet_name='SupIm')
     write_t("Solar_Final.xlsx", 'SupIm')
     return
 
-
-<<<<<<< HEAD
-=======
 # generates solar sheet "Solar_Final.xlsx"
->>>>>>> add_files_branch
 def generate_e_sheet(fn1):
     solar = pd.read_excel(fn1)
     solar.to_excel("TimeVarEff_Final.xlsx", sheet_name='TimeVarEff')

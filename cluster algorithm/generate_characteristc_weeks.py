@@ -74,7 +74,6 @@ def write_t(name, sheet):
     wb.save(name)
     wb.close()
 
-
 # generate solar sheet "Solar_Final.xlsx"
 def generate_solar_sheet(fn1):
     solar = pd.read_excel(fn1)
@@ -82,7 +81,7 @@ def generate_solar_sheet(fn1):
     write_t("Solar_Final.xlsx", 'SupIm')
     return
 
-
+# generates solar sheet "Solar_Final.xlsx"
 def generate_e_sheet(fn1):
     solar = pd.read_excel(fn1)
     solar.to_excel("TimeVarEff_Final.xlsx", sheet_name='TimeVarEff')
@@ -91,7 +90,7 @@ def generate_e_sheet(fn1):
 
 
 def plot_ts_and_cluster(result, source, string):
-    # result: matrix of clustered ts
+    # result: matrix of clustering annual timeseries
     # source 52 weeks input data
     global g
     length = range(hours)

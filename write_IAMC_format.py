@@ -39,7 +39,6 @@ for fn in name_files:
             name_year_region.append(tstemp.split('.')[0:2])
 
 
-
 # create IAMC-format template
 workbook = xlsxwriter.Workbook('GUSTO_results.xlsx')
 worksheet = workbook.add_worksheet()
@@ -75,13 +74,14 @@ for index in range(len(name_scenario)):
             worksheet.write('G' + str(row+2+length*sto+index*3*length),
                             list_ts[index].iloc[row + 2][start + sto])
 workbook.close()
-<<<<<<< HEAD
-del[bold, workbook, worksheet, index, length, row, model_name, file_excel, fn, tstemp, df, name_files]
-            
-=======
+<< << << < HEAD
+del[bold, workbook, worksheet, index, length, row,
+    model_name, file_excel, fn, tstemp, df, name_files]
+
+== == == =
 del[bold, workbook, worksheet, index, length, row, model_name]
 
->>>>>>> addfirstscript
+>>>>>> > addfirstscript
 df = pd.read_excel('GUSTO_results.xlsx')
 df = pyam.IamDataFrame(df, encoding='utf-8')
 print(df.head())

@@ -140,8 +140,8 @@ def compare_scenarios(result_files, output_filename):
             costs.append(cost)
 
             # extract sites and commodities from scenario
-            sitcom = [value.split('.') for value
-                      in esum.columns.get_level_values(0)]
+            # sitcom = [value.split('.') for value
+                      # in esum.columns.get_level_values(0)]
             com_sums = pd.DataFrame()
             sit_com = esum.columns.get_level_values(0)
 
@@ -197,7 +197,7 @@ def compare_scenarios(result_files, output_filename):
                      linewidth=0, width=0.5)
     if not earnt.empty:
         earnt_colors = [urbs.to_color(ct) for ct in earnt.columns]
-        bp0a = earnt.plot(ax=ax0, kind='barh', stacked=True,
+        earnt.plot(ax=ax0, kind='barh', stacked=True,
                           color=earnt_colors, linewidth=0)
 
     ax1 = plt.subplot(gs[1])

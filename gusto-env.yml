@@ -14,3 +14,6 @@ dependencies:
   - pyomo=5.6.7
   - glpk
   - psutil=5.6.5
+  - pyam=0.7.0
+  - xlrd=1.2.0
+  - xlsxwriter=0.6.4

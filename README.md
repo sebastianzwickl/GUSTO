@@ -39,7 +39,7 @@ At this point it is again pointed out that this model is an extension of the exi
 4. Install the requirements via Miniconda by `conda env create -f gusto-env.yml`.
 5. Each time you open a new terminal (like Anaconda Prompt (miniconda3)) activate the environment by `conda activate gusto`.
 
-Afterwards you can run the model. Therefore open a `Anaconda Propmpt (miniconda3)` terminal. Use the `cd` command to change the current directiory and open the related one where you find `run_model.py`. Finally type `python run_model.py` to solve the optimization problem.
+Afterwards you can run the model. Therefore open a `Anaconda Propmpt (miniconda3)` terminal. Use the `cd` command to change the current directiory and open the related one where you find `run_model.py`. Finally type `python run_model.py` to solve the optimization problem. The results can be found in the `Output` folder. 
 
 ## References
 <a id="1">[1]</a> 

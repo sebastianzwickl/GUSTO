@@ -135,7 +135,7 @@ e = sort_one_type(cv[:, 4*sites:5*sites])
 matrix_all = np.concatenate((elec, heat, cold, solar, e), axis=0)
 matrix_to_kmeans = np.transpose(matrix_all)
 
-current_dir = os.path.dirname(__file__)
+# current_dir = os.path.dirname(__file__)
 
 # edit number of clusters to represent annual timeseries
 for g in range(1):
@@ -185,4 +185,5 @@ for g in range(1):
         plot_ts_and_cluster(centroids[z*hours:(z+1)*hours, :],
                             matrix_all[z*hours:(z+1)*hours, :],
                             (string[z]))
-    os.chdir(current_dir)
+    # os.chdir(current_dir)
+    # print(os.getcwd())

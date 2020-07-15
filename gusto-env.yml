@@ -17,3 +17,5 @@ dependencies:
   - pyam=0.7.0
   - xlrd=1.2.0
   - xlsxwriter=0.6.4
+  - openpyxl=3.0.4
+  - tslearn=0.4.1

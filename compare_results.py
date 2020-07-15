@@ -8,9 +8,9 @@ import urbs
 import sys
 from matplotlib.ticker import FormatStrFormatter
 
-pd.set_option('display.max_columns',100)
-pd.set_option('display.max_colwidth',10)
-pd.set_option('display.width',None)
+pd.set_option('display.max_columns', 100)
+pd.set_option('display.max_colwidth', 10)
+pd.set_option('display.width', None)
 
 
 # INIT
@@ -151,12 +151,10 @@ def compare_scenarios(result_files, output_filename):
                                        .sum(axis=1), columns=[com])
                 com_sums = pd.concat([com_sums, com_sum], axis=1)
             esums.append(com_sums)
-            
 
     # merge everything into one DataFrame each
     costs = pd.concat(costs, axis=1, keys=scenario_names)
     esums = pd.concat(esums, axis=1, keys=scenario_names)
-    
 
     # ANALYSE
 
@@ -177,16 +175,13 @@ def compare_scenarios(result_files, output_filename):
     # drop all unused commodities and sort/transpose
     # convert MWh to GWh
 
-
     esums = esums.loc['Created']
-    esums.drop('index', axis=1, level = 1, inplace = True)
-
+    esums.drop('index', axis=1, level=1, inplace=True)
 
     esums.index.name = 'Commodity'
     used_commodities = (esums.sum(axis=1) > 0)
     esums = esums[used_commodities].sort_index().transpose()
 
-    
     # PLOT
     fig = plt.figure(figsize=(20, 8))
     gs = gridspec.GridSpec(1, 2, width_ratios=[2, 3])
@@ -201,7 +196,6 @@ def compare_scenarios(result_files, output_filename):
                           color=earnt_colors, linewidth=0)
 
     ax1 = plt.subplot(gs[1])
-   
 
     esums_colors = [urbs.to_color(commodity) for commodity in esums.columns]
     bp1 = esums.plot(ax=ax1, kind='barh', stacked=True, color=esums_colors,
@@ -209,15 +203,14 @@ def compare_scenarios(result_files, output_filename):
 
     group_hbar_plots(ax1, 1)
 
-
     string = esums.index.get_level_values(1)
     string_save = []
     for i in range(len(string)):
         string_save.append(string[i][5:])
-        
-    string_axes = []    
+
+    string_axes = []
     for i in range(len(string_save)):
-        string_axes.append(string_save[i].replace("."," "))
+        string_axes.append(string_save[i].replace(".", " "))
 
     del [string_save]
     ax1.set_yticklabels(string_axes)
@@ -249,10 +242,9 @@ def compare_scenarios(result_files, output_filename):
                  linewidth=0)
 
     ax0.set_xlabel('Total costs (million EUR/a)')
-    
+
     ax0.xaxis.set_major_formatter(FormatStrFormatter('%.1f'))
-    
-    
+
     if 'CO2' in sit_com:
         ax1.set_xlabel('Total energy produced (MWh)\n Emitted CO2 (kt)')
     else:
@@ -266,6 +258,7 @@ def compare_scenarios(result_files, output_filename):
     with pd.ExcelWriter('{}.{}'.format(output_filename, 'xlsx')) as writer:
         costs.to_excel(writer, 'Costs')
         esums.to_excel(writer, 'Energy sums')
+
 
 def generate_comparison_figure():
     print('Create comparison figure')
@@ -286,6 +279,3 @@ def generate_comparison_figure():
 
 if __name__ == '__main__':
     generate_comparison_figure()
-
-
-

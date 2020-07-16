@@ -9,6 +9,9 @@ GUSTO is a mixed-integer linear program (MILP) for energy system modeling. Thank
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3946098.svg)](https://doi.org/10.5281/zenodo.3946098)
 
 ## Objective and scope:
+
+<img src="./_static/open_entrance-logo.png" width="150" heigth="150" align="right">
+
 The [Horizon 2020 openENTRANCE project](https://openentrance.eu) aims at developing, using and disseminating an open, transparent and integrated modelling platform for assessing low-carbon transition pathways in Europe. openENTRANCE will analyse the new challenges of the energy transition and demonstrate the ability of the project to answer a wide range of questions linked to the energy transition by carrying out case study simulations. This model (as a merger of the two models HEROS and OSCARS) is part of case study 3, which is described as follows:
 
 **CS3: Need of flexibility – storage:** Comparison of the flexibility of pumped hydro storage with batteries for future high-variability power systems caused by a large share of variable renewables. Analyses for the Iberian Peninsula and the Nordic region. Impacts on pan-European level. Key aspects covered: variability, flexibility, decentralisation

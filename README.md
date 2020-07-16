@@ -40,7 +40,7 @@ Also, the utilization of energy technologies are illustrated in the results file
 
 <img src="./_static/scenario_baseline_cost-2050-Elec-ES62-all.png" width="1000" heigth="400" align="center">
 <img src="./_static/comparison.png" width="560" heigth="500" align="left">
-<img src="./_static/Scenarios_Retrieved.png" width="410" heigth="300" align="right">  
+<img src="./_static/Scenarios_Retrieved.png" width="410" heigth="250" align="right">  
 
 For example, the figure on the right shows how the different operation strategies of the batteries affect the output power (see blue-marked area).
 

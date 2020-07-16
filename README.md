@@ -1,13 +1,17 @@
 # GUSTO
 enerGy commUnity SysTem mOdeling
 
+GUSTO is a mixed-integer linear program (MILP) for energy system modeling. Thanks to the open-source energy system modeling community it is an extension of the existing open-source model (OSM) [urbs](https://github.com/tum-ens/urbs)[[1]](#1).
+
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3946098.svg)](https://doi.org/10.5281/zenodo.3946098)
 
+## Objective and scope:
+The [Horizon 2020 openENTRANCE project](https://openentrance.eu) aims at developing, using and disseminating an open, transparent and integrated modelling platform for assessing low-carbon transition pathways in Europe. openENTRANCE will analyse the new challenges of the energy transition and demonstrate the ability of the project to answer a wide range of questions linked to the energy transition by carrying out case study simulations. This model (as a merger of the two models HEROS and OSCARS) is part of case study 3, which is described as follows:
 
-GUSTO is a mixed-integer linear program (MILP) for energy system modeling. Thanks to the open-source energy system modeling community it is an extension of the existing open-source model (OSM) [urbs](https://github.com/tum-ens/urbs)[[1]](#1).
+**CS3: Need of flexibility – storage:** Comparison of the flexibility of pumped hydro storage with batteries for future high-variability power systems caused by a large share of variable renewables. Analyses for the Iberian Peninsula and the Nordic region. Impacts on pan-European level. Key aspects covered: variability, flexibility, decentralisation
 
 ## Further developments of the modeling framework:
 - Extending investment costs by capacity-independent connection costs for network-based technologies

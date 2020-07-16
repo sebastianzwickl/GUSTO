@@ -38,7 +38,13 @@ reveneue, purchase (see after running the model `./Output/scenario_name_folder/s
 
 Also, the utilization of energy technologies are illustrated in the results file and as images (i.e. temporal utilization of photovoltaics). These results can be adjusted in the `run_model.py` script (i.e. `report_tuple` and `plot_tuple`).
 
-<img src="./_static/High_Temporal_Resolution.png" width="1000" heigth="300" align="center">
+<img src="./_static/scenario_baseline_cost-2050-Elec-ES62-all.png" width="800" heigth="300" align="center">
+
+
+<img src="./_static/comparison.png" width="800" heigth="300" align="center">
+
+
+<img src="./_static/Scenarios_Retrieved.png" width="500" heigth="300" align="center">
 
 ## How to run the model:
 At this point it is again pointed out that this model is an extension of the existing open-source model **urbs**. The corresponding  [repository](https://github.com/tum-ens/urbs) contains a very detailed documentation and instructions for installation which can be referred to. However, the following steps might be the quickest path to get first results of the model and is also pointed out in the reffered repository. Thereby, a new environment is created (more details about virtual environments [here](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)).

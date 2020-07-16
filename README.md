@@ -39,8 +39,10 @@ reveneue, purchase (see after running the model `./Output/scenario_name_folder/s
 Also, the utilization of energy technologies are illustrated in the results file and as images (i.e. temporal utilization of photovoltaics). These results can be adjusted in the `run_model.py` script (i.e. `report_tuple` and `plot_tuple`).
 
 <img src="./_static/scenario_baseline_cost-2050-Elec-ES62-all.png" width="1000" heigth="400" align="center">
-<img src="./_static/comparison.png" width="570" heigth="500" align="left">
-<img src="./_static/Scenarios_Retrieved.png" width="400" heigth="500" align="right">  
+<img src="./_static/comparison.png" width="550" heigth="500" align="left">
+<img src="./_static/Scenarios_Retrieved.png" width="380" heigth="500" align="right">  
+
+For example, the figure on the right shows how the different operation strategies of the batteries affect the output power (see blue-marked area).
 
 
 ## How to run the model:

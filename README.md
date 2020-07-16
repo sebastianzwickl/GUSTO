@@ -13,6 +13,8 @@ The [Horizon 2020 openENTRANCE project](https://openentrance.eu) aims at develop
 
 **CS3: Need of flexibility – storage:** Comparison of the flexibility of pumped hydro storage with batteries for future high-variability power systems caused by a large share of variable renewables. Analyses for the Iberian Peninsula and the Nordic region. Impacts on pan-European level. Key aspects covered: variability, flexibility, decentralisation
 
+More information about the case studies of the project can be found [here](https://openentrance.eu/2020/07/15/model-interface-common-database/).
+
 ## Further developments of the modeling framework:
 - Extending investment costs by capacity-independent connection costs for network-based technologies
 - Weighting of modeled time-steps (as an example to consider time step frequency)

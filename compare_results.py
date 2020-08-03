@@ -161,11 +161,11 @@ def compare_scenarios(result_files, output_filename):
     # drop redundant 'costs' column label
     # make index name nicer for plot
     # sort/transpose frame
-    # convert EUR/a to 1e6 EUR/a
+    # convert EUR/a to 1e3 EUR/a
     costs.columns = costs.columns.droplevel(1)
     costs.index.name = 'Cost type'
     costs = costs.sort_index().transpose()
-    costs = costs / 1e6
+    costs = costs / 1e3
     spent = costs.loc[:, costs.sum() > 0]
     earnt = costs.loc[:, costs.sum() < 0]
 
@@ -230,8 +230,9 @@ def compare_scenarios(result_files, output_filename):
         ax.yaxis.set_ticks_position('none')
 
         # group 1,000,000 with commas
-        group_thousands = tkr.FuncFormatter(lambda x,
-                                            pos: '{:0,d}'.format(int(x)))
+        group_thousands = tkr.FuncFormatter(
+            lambda x, pos: '{:0,d}'.format(int(x)).
+            replace(',', ''))
         ax.xaxis.set_major_formatter(group_thousands)
 
         # legend
@@ -241,9 +242,9 @@ def compare_scenarios(result_files, output_filename):
         plt.setp(lg.get_patches(), edgecolor=urbs.to_color('Decoration'),
                  linewidth=0)
 
-    ax0.set_xlabel('Total costs (million EUR/a)')
+    ax0.set_xlabel('Total costs (thousands EUR/a)')
 
-    ax0.xaxis.set_major_formatter(FormatStrFormatter('%.1f'))
+    ax0.xaxis.set_major_formatter(FormatStrFormatter('%d'))
 
     if 'CO2' in sit_com:
         ax1.set_xlabel('Total energy produced (MWh)\n Emitted CO2 (kt)')

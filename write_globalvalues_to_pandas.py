@@ -17,7 +17,8 @@ def write_globvar_to_paretofront():
     os.chdir(wd)
     name_files = os.listdir()
     for n in reversed(range(len(name_files))):
-        if ('scenario_' not in name_files[n] and '.xlsx' not in name_files[n] and
+        if ('scenario_' not in name_files[n] and
+                '.xlsx' not in name_files[n] and
                 '~' in name_files[n]):
             name_files.pop(n)
     del[n, wd, e]

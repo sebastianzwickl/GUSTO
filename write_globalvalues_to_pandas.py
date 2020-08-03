@@ -17,9 +17,9 @@ def write_globvar_to_paretofront():
     os.chdir(wd)
     name_files = os.listdir()
     for n in reversed(range(len(name_files))):
-        if ('scenario_' not in name_files[n] and
-                '.xlsx' not in name_files[n] and
-                '~' in name_files[n]):
+        if 'scenario_' in name_files[n] and '.xlsx' in name_files[n]:
+            pass
+        else:
             name_files.pop(n)
     del[n, wd, e]
 
@@ -28,7 +28,8 @@ def write_globvar_to_paretofront():
 
     for j in name_files:
         if dataframe.empty:
-            dataframe = pd.read_excel(j, sheet_name=sheetname,
+            dataframe = pd.read_excel(j,
+                                      sheet_name=sheetname,
                                       usecols=lambda x: 'Unnamed' not in x)
             for i in range(globvar):
                 if 'cost' in j:
@@ -40,9 +41,9 @@ def write_globvar_to_paretofront():
             dataframe = dataframe.assign(Strategy=listvar)
 
         else:
-            dftemp = pd.read_excel(j, sheet_name=sheetname,
-                                   usecols=lambda x:
-                                   'Unnamed' not in x)
+            dftemp = pd.read_excel(j,
+                                   sheet_name=sheetname,
+                                   usecols=lambda x: 'Unnamed' not in x)
             listvar.clear()
             for i in range(globvar):
                 if 'cost' in j:
@@ -60,16 +61,13 @@ def write_globvar_to_paretofront():
     with plt.style.context('seaborn'):
 
         x = dataframe.loc[dataframe['Variable'].
-                          isin(['Local deficit/excess'])]
-        ['Global values'].tolist()
+                          isin(['Local deficit/excess'])]['Global values'].\
+            tolist()
         y = dataframe.loc[dataframe['Variable'].
-                          isin(['Total costs'])]['Global values'].tolist()
+                          isin(['Total costs'])]['Global values'].\
+            tolist()
         y.sort()
         x.sort()
-        print('x')
-        print(x)
-        print('y')
-        print(y)
         x = np.flip(x)
         plt.figure()
         plt.plot(x, y)

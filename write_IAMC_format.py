@@ -108,3 +108,11 @@ def write_to_iamc_format():
 
 if __name__ == '__main__':
     write_to_iamc_format()
+
+df = pd.read_excel('GUSTO_results.xlsx')
+df = pyam.IamDataFrame(df, encoding='utf-8')
+print(df.head())
+fig, ax = plt.subplots(figsize=(10, 10))
+# df.line_plot(ax=ax, color='variable', fill_between=dict(alpha=0.75))
+df.line_plot(ax=ax, color='variable')
+plt.show()

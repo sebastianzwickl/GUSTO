@@ -41,7 +41,8 @@ def write_globvar_to_paretofront():
 
         else:
             dftemp = pd.read_excel(j, sheet_name=sheetname,
-                                   usecols=lambda x: 'Unnamed' not in x)
+                                   usecols=lambda x:
+                                   'Unnamed' not in x)
             listvar.clear()
             for i in range(globvar):
                 if 'cost' in j:

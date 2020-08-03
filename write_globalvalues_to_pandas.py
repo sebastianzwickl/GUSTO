@@ -58,7 +58,8 @@ def write_globvar_to_paretofront():
     with plt.style.context('seaborn'):
 
         x = dataframe.loc[dataframe['Variable'].
-                          isin(['Local deficit/excess'])]['Global values'].tolist()
+                          isin(['Local deficit/excess'])]
+        ['Global values'].tolist()
         y = dataframe.loc[dataframe['Variable'].
                           isin(['Total costs'])]['Global values'].tolist()
         y.sort()

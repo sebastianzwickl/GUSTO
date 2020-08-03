@@ -84,9 +84,13 @@ def write_to_iamc_format():
                 worksheet.write('F' + str(row+2+length*sto+index*3*length),
                                 list_ts[index].iloc[row + 2][0])
                 # write value
-                worksheet.write('G' + str(row+2+length*sto+index*3*length),
-                                list_ts[index].iloc[row + 2][start + sto]
-                                if not math.isnan(list_ts[index].iloc[row + 2][start + sto])
+                worksheet.write('G' +
+                                str(row+2+length*sto+index*3*length),
+                                list_ts[index].iloc[row + 2]
+                                [start + sto]
+                                if not math.isnan(
+                                    list_ts[index].iloc[row + 2]
+                                    [start + sto])
                                 else 0)
     workbook.close()
 

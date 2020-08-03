@@ -25,7 +25,7 @@ result_dir = urbs.prepare_result_directory(result_name)  # name + time stamp
 # copy input file to result directory
 try:
     shutil.copytree(input_path, os.path.join(result_dir, input_dir))
-except NotADirectoryError:
+except Exception:
     shutil.copyfile(input_path, os.path.join(result_dir, input_files))
 # copy run file to result directory
 shutil.copy(__file__, result_dir)
@@ -83,9 +83,14 @@ scenarios = [
     [urbs.scenario_baseline4, 'local']
 ]
 
-# multi criteria optimization: set max(local self-consumption) or min(supply and feed-in from public grid) as objective
-# function, set further criteria dimension with upper bound of total costs while optimizing local self-consumption
-# start Pareto front algorithm with inf. upper bound and set upper bound after each iteration step accordingly
+# multi criteria optimization: set max(local self-consumption)
+# or min(supply and feed-in from public grid) as objective
+# function, set further criteria dimension with
+# upper bound of total costs while
+# optimizing local self-consumption
+# start Pareto front algorithm with
+# inf. upper bound and set upper bound after
+# each iteration step accordingly
 upper_bound = 9999999
 
 for scenario, objective in scenarios:

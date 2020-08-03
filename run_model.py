@@ -9,12 +9,12 @@ import write_IAMC_format
 import write_globalvalues_to_pandas
 
 # change terminal display
-pd.set_option('display.max_columns', None)  
+pd.set_option('display.max_columns', None)
 pd.set_option('display.expand_frame_repr', False)
 pd.set_option('max_colwidth', -1)
 
 # set up directory file
-input_files = 'Technical_economic_input_data.xlsx' # xlsx file recommended
+input_files = 'Technical_economic_input_data.xlsx'  # xlsx file recommended
 input_dir = 'Input'
 input_path = os.path.join(input_dir, input_files)
 
@@ -45,7 +45,7 @@ dt = 1  # length of each time step (unit: hours)
 report_tuples = [
     (2050, 'ES62', 'Elec'),
     (2050, 'ES70', 'Elec')
-    ]
+]
 
 # optional: define names for sites in report_tuples
 report_sites_name = {('ES62', 'ES70'): 'All'}
@@ -54,7 +54,7 @@ report_sites_name = {('ES62', 'ES70'): 'All'}
 plot_tuples = [
     (2050, 'ES62', 'Elec'),
     (2050, 'ES70', 'Elec')
-    ]
+]
 
 # optional: define names for sites in plot_tuples
 plot_sites_name = {('ES62', 'ES70'): 'All'}
@@ -81,7 +81,7 @@ scenarios = [
     [urbs.scenario_baseline2, 'local'],
     [urbs.scenario_baseline3, 'local'],
     [urbs.scenario_baseline4, 'local']
-            ]
+]
 
 # multi criteria optimization: set max(local self-consumption) or min(supply and feed-in from public grid) as objective
 # function, set further criteria dimension with upper bound of total costs while optimizing local self-consumption

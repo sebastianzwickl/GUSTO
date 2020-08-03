@@ -231,7 +231,7 @@ def compare_scenarios(result_files, output_filename):
 
         # group 1,000,000 with commas
         group_thousands = tkr.FuncFormatter(lambda x,
-                                            pos: '{:0,d}'.format(int(x)).replace(',',''))
+                                            pos: '{:0,d}'.format(int(x)).replace(',', ''))
         ax.xaxis.set_major_formatter(group_thousands)
 
         # legend

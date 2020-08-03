@@ -99,12 +99,12 @@ def write_to_iamc_format():
     df = pyam.IamDataFrame(df, encoding='utf-8')
     fig, ax = plt.subplots(figsize=(10, 10))
     df_filter = df.filter(variable='Retrieved')
-    df_filter.line_plot(ax=ax, color='variable'
-                        ,fill_between=dict(alpha=0.75))
+    df_filter.line_plot(ax=ax, color='variable', fill_between=dict(alpha=0.75))
     fig.set_size_inches(30, 12)
     for ext in ['png']:
         fig.savefig('{}.{}'.format('Scenarios_Retrieved', ext),
                     bbox_inches='tight')
+
 
 if __name__ == '__main__':
     write_to_iamc_format()

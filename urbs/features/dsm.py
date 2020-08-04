@@ -93,8 +93,9 @@ def res_dsm_downward_rule(m, tm, stf, sit, com):
     dsm_down_sum = 0
     for t in dsm_time_tuples(tm,
                              m.timesteps[1:],
-                             max(int(1 / m.dt *
-                                 m.dsm_dict['delay'][(stf, sit, com)]), 1)):
+                             max(
+                                 int(1 / m.dt * m.dsm_dict['delay'][(
+                                         stf, sit, com)]), 1)):
         dsm_down_sum += m.dsm_down[t, tm, stf, sit, com]
     return dsm_down_sum <= (m.dt * m.dsm_dict['cap-max-do'][(stf, sit, com)])
 

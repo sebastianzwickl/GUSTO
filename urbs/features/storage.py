@@ -1,4 +1,3 @@
-import math
 import pyomo.core as pyomo
 
 

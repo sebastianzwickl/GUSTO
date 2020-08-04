@@ -53,6 +53,11 @@ At this point it is again pointed out that this model is an extension of the exi
 
 Afterwards you can run the model. Therefore open a `Anaconda Propmpt (miniconda3)` terminal. Use the `cd` command to change the current directiory and open the related one where you find `run_model.py`. Finally type `python run_model.py` to solve the optimization problem. The results can be found in the `Output` folder. 
 
+## User guide:
+For the base open-source model urbs a detailed description exists [here](https://github.com/sebastianzwickl/GUSTO/blob/master/User%20guide/urbs.pdf). 
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
 ## References
 <a id="1">[1]</a> 
 Dorfner, J., and T. Hamacher (2017)

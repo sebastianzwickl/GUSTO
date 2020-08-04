@@ -341,7 +341,7 @@ def inst_sto_tuples(m):
                     inst_sto.append((sit, sto, com, stf_later))
             elif (sorted_stf[index_helper + 1] <=
                   min(m.stf) + m.storage_dict['lifetime'][
-                                (stf, sit, sto, com)]):
+                    (stf, sit, sto, com)]):
                 inst_sto.append((sit, sto, com, stf_later))
 
     return inst_sto

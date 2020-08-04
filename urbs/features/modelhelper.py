@@ -35,9 +35,9 @@ def invcost_factor(dep_prd, interest, discount=None, year_built=None,
         else:
             return ((1 + discount) ** (1 - (year_built-stf_min)) *
                     (interest * (1 + interest) ** dep_prd *
-                    ((1 + discount) ** dep_prd - 1)) /
+                     ((1 + discount) ** dep_prd - 1)) /
                     (discount * (1 + discount) ** dep_prd *
-                    ((1+interest) ** dep_prd - 1)))
+                     ((1+interest) ** dep_prd - 1)))
 
 
 def overpay_factor(dep_prd, interest, discount, year_built, stf_min, stf_end):
@@ -69,9 +69,9 @@ def overpay_factor(dep_prd, interest, discount, year_built, stf_min, stf_end):
         else:
             return ((1 + discount) ** (1 - (year_built - stf_min)) *
                     (interest * (1 + interest) ** dep_prd *
-                    ((1 + discount) ** op_time - 1)) /
+                     ((1 + discount) ** op_time - 1)) /
                     (discount * (1 + discount) ** dep_prd *
-                    ((1 + interest) ** dep_prd - 1)))
+                     ((1 + interest) ** dep_prd - 1)))
 
 
 # Energy related costs
@@ -180,7 +180,7 @@ def op_pro_tuples(pro_tuple, m):
                 if (stf_later +
                     m.global_prop.loc[(max(sorted_stf), 'Weight'), 'value'] -
                     1 <= stf + m.process_dict['depreciation'][
-                                              (stf, sit, pro)]):
+                        (stf, sit, pro)]):
                     op_pro.append((sit, pro, stf, stf_later))
             elif (sorted_stf[index_helper+1] <=
                   stf + m.process_dict['depreciation'][(stf, sit, pro)] and
@@ -206,9 +206,9 @@ def inst_pro_tuples(m):
             index_helper = sorted_stf.index(stf_later)
             if stf_later == max(m.stf):
                 if (stf_later +
-                   m.global_prop.loc[(max(sorted_stf), 'Weight'), 'value'] -
-                   1 < min(m.stf) + m.process_dict['lifetime'][
-                                                   (stf, sit, pro)]):
+                    m.global_prop.loc[(max(sorted_stf), 'Weight'), 'value'] -
+                    1 < min(m.stf) + m.process_dict['lifetime'][
+                        (stf, sit, pro)]):
                     inst_pro.append((sit, pro, stf_later))
             elif (sorted_stf[index_helper+1] <=
                   min(m.stf) + m.process_dict['lifetime'][(stf, sit, pro)]):

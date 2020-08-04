@@ -1,5 +1,6 @@
 import pyomo.core as pyomo
 
+
 def e_tra_domain_rule(m, tm, stf, sin, sout, tra, com):
     # assigning e_tra_in and e_tra_out variable domains for transport and DCPF
     if (stf, sin, sout, tra, com) in m.tra_tuples_dc:
@@ -102,6 +103,8 @@ def add_transmission(m):
     return m
 
 # adds the transmission features to model with DCPF model features
+
+
 def add_transmission_dc(m):
     # defining transmission tuple sets for transport and DCPF model separately
     tra_tuples = set()
@@ -279,6 +282,8 @@ def def_transmission_output_rule(m, tm, stf, sin, sout, tra, com):
             m.transmission_dict['eff'][(stf, sin, sout, tra, com)])
 
 # power flow rule for DCPF transmissions
+
+
 def def_dc_power_flow_rule(m, tm, stf, sin, sout, tra, com):
     return (m.e_tra_in[tm, stf, sin, sout, tra, com] ==
             (m.voltage_angle[tm, stf, sin] - m.voltage_angle[
@@ -291,17 +296,23 @@ def def_dc_power_flow_rule(m, tm, stf, sin, sout, tra, com):
                 stf, sin, sout, tra, com)])
 
 # voltage angle difference rule for DCPF transmissions
+
+
 def def_angle_limit_rule(m, tm, stf, sin, sout, tra, com):
     return (- m.transmission_dict['difflimit'][(stf, sin, sout, tra, com)],
             (m.voltage_angle[tm, stf, sin] - m.voltage_angle[tm, stf, sout]),
             m.transmission_dict['difflimit'][(stf, sin, sout, tra, com)])
 
 # first rule for creating absolute transmission input
+
+
 def e_tra_abs_rule1(m, tm, stf, sin, sout, tra, com):
     return (m.e_tra_in[tm, stf, sin, sout, tra, com] <=
             m.e_tra_abs[tm, stf, sin, sout, tra, com])
 
 # second rule for creating absolute transmission input
+
+
 def e_tra_abs_rule2(m, tm, stf, sin, sout, tra, com):
     return (-m.e_tra_in[tm, stf, sin, sout, tra, com] <=
             m.e_tra_abs[tm, stf, sin, sout, tra, com])
@@ -379,11 +390,11 @@ def transmission_cost(m, cost_type):
                        m.transmission_dict['cost_factor'][t]
                        for tm in m.tm
                        for t in m.tra_tuples_tp) + \
-                   sum(m.e_tra_abs[(tm,) + t] * int(m.weight[tm]) *
-                       m.transmission_dict['var-cost'][t] *
-                       m.transmission_dict['cost_factor'][t]
-                       for tm in m.tm
-                       for t in m.tra_tuples_dc)
+                sum(m.e_tra_abs[(tm,) + t] * int(m.weight[tm]) *
+                    m.transmission_dict['var-cost'][t] *
+                    m.transmission_dict['cost_factor'][t]
+                    for tm in m.tm
+                    for t in m.tra_tuples_dc)
         else:
             return sum(m.e_tra_in[(tm,) + t] * int(m.weight[tm]) *
                        m.transmission_dict['var-cost'][t] *

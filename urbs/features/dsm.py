@@ -75,7 +75,7 @@ def def_dsm_variables_rule(m, tm, stf, sit, com):
     for tt in dsm_time_tuples(tm,
                               m.timesteps[1:],
                               max(int(1 / m.dt *
-                                  m.dsm_dict['delay'][(stf, sit, com)]), 1)):
+                                      m.dsm_dict['delay'][(stf, sit, com)]), 1)):
         dsm_down_sum += m.dsm_down[tm, tt, stf, sit, com]
     return dsm_down_sum == (m.dsm_up[tm, stf, sit, com] *
                             m.dsm_dict['eff'][(stf, sit, com)])
@@ -95,7 +95,7 @@ def res_dsm_downward_rule(m, tm, stf, sit, com):
                              m.timesteps[1:],
                              max(
                                  int(1 / m.dt * m.dsm_dict['delay'][(
-                                         stf, sit, com)]), 1)):
+                                     stf, sit, com)]), 1)):
         dsm_down_sum += m.dsm_down[t, tm, stf, sit, com]
     return dsm_down_sum <= (m.dt * m.dsm_dict['cap-max-do'][(stf, sit, com)])
 
@@ -106,7 +106,7 @@ def res_dsm_maximum_rule(m, tm, stf, sit, com):
     for t in dsm_time_tuples(tm,
                              m.timesteps[1:],
                              max(int(1 / m.dt *
-                                 m.dsm_dict['delay'][(stf, sit, com)]), 1)):
+                                     m.dsm_dict['delay'][(stf, sit, com)]), 1)):
         dsm_down_sum += m.dsm_down[t, tm, stf, sit, com]
 
     max_dsm_limit = m.dt * max(m.dsm_dict['cap-max-up'][(stf, sit, com)],
@@ -120,7 +120,7 @@ def res_dsm_recovery_rule(m, tm, stf, sit, com):
     for t in dsm_recovery(tm,
                           m.timesteps[1:],
                           max(int(1 / m.dt *
-                              m.dsm_dict['recov'][(stf, sit, com)]), 1)):
+                                  m.dsm_dict['recov'][(stf, sit, com)]), 1)):
         dsm_up_sum += m.dsm_up[t, stf, sit, com]
     return dsm_up_sum <= (m.dsm_dict['cap-max-up'][(stf, sit, com)] *
                           m.dsm_dict['delay'][(stf, sit, com)])
@@ -136,7 +136,7 @@ def dsm_surplus(m, tm, stf, sit, com):
                     for t in dsm_time_tuples(
                     tm, m.timesteps[1:],
                     max(int(1 / m.dt *
-                        m.dsm_dict['delay'][(stf, sit, com)]), 1))))
+                            m.dsm_dict['delay'][(stf, sit, com)]), 1))))
     else:
         return 0
 
@@ -160,10 +160,10 @@ def dsm_down_time_tuples(time, sit_com_tuple, m):
         for step1 in time:
             for step2 in range(step1 -
                                max(int(delay[stf, site, commodity] /
-                                   m.dt.value), 1),
+                                       m.dt.value), 1),
                                step1 +
                                max(int(delay[stf, site, commodity] /
-                                   m.dt.value), 1) + 1):
+                                       m.dt.value), 1) + 1):
                 if lb <= step2 <= ub:
                     time_list.append((step1, step2, stf, site, commodity))
 

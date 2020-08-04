@@ -44,6 +44,7 @@ Also, the utilization of energy technologies are illustrated in the results file
 <img src="./_static/Scenarios_Retrieved.png" width="550"  align="right">  
 
 <br />
+<pre>
 
 ## How to run the model:
 At this point it is again pointed out that this model is an extension of the existing open-source model **urbs**. The corresponding  [repository](https://github.com/tum-ens/urbs) contains a very detailed documentation and instructions for installation which can be referred to. However, the following steps might be the quickest path to get first results of the model and is also pointed out in the reffered repository. Thereby, a new environment is created (more details about virtual environments [here](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)).

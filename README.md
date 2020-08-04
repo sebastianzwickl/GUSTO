@@ -40,10 +40,9 @@ Also, the utilization of energy technologies are illustrated in the results file
 
 <img src="./_static/scenario_baseline_cost-2050-Elec-ES62-all.png" width="1000" heigth="400" align="center">
 <img src="./_static/comparison.png" width="1000" heigth="400" align="center">
-<img src="./_static/Pareto front.png" width="380"  align="left">  
+<img src="./_static/Pareto front.png" width="390"  align="left">  
 <img src="./_static/Scenarios_Retrieved.png" width="530"  align="right">  
 
-<br />
 <br />
 
 ## How to run the model:

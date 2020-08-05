@@ -65,7 +65,7 @@ For the base open-source model urbs a detailed description exists [here](https:/
 
 ## Open data platform and IAMC format
 Data exchange with the open platform and the scenario explorer of the project is supported. This is provided by the [IAMC format](https://pyam-iamc.readthedocs.io/en/latest/examples/index.html) and [pyam](https://github.com/IAMconsortium/pyam). More information is available through the links. 
-A draft script allows writing to the IAMC format (see [Gusto_results.xlsx](https://github.com/sebastianzwickl/GUSTO/blob/master/Output/Use_case_ES-20200804T0614/GUSTO_results.xlsx). Extensions and updates will follow. 
+A draft script allows writing to the IAMC format (see [Gusto_results.xlsx])(https://github.com/sebastianzwickl/GUSTO/blob/master/Output/Use_case_ES-20200804T0614/GUSTO_results.xlsx). Extensions and updates will follow. 
 
 
 ## References

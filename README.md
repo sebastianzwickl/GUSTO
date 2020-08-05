@@ -18,6 +18,8 @@ The [Horizon 2020 openENTRANCE project](https://openentrance.eu) aims at develop
 
 More information about the case studies of the project can be found [here](https://openentrance.eu/2020/07/15/model-interface-common-database/).
 
+The model provides a tool for investment decisions as well as for the operational utilization of the generation units, technologies and storage units. 
+
 ## Further developments of the modeling framework:
 - Extending investment costs by capacity-independent connection costs for network-based technologies
 - Weighting of modeled time-steps (as an example to consider time step frequency)
@@ -60,6 +62,11 @@ Afterwards you can run the model. Therefore open a `Anaconda Propmpt (miniconda3
 For the base open-source model urbs a detailed description exists [here](https://github.com/sebastianzwickl/GUSTO/blob/master/User%20guide/urbs.pdf). 
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+## Open data platform and IAMC format
+Data exchange with the open platform and the scenario explorer of the project is supported. This is provided by the [IAMC format](https://pyam-iamc.readthedocs.io/en/latest/examples/index.html) and [pyam](https://github.com/IAMconsortium/pyam). More information is available through the links. 
+A draft script allows writing to the IAMC format (see [Gusto_results.xlsx](https://github.com/sebastianzwickl/GUSTO/blob/master/Output/Use_case_ES-20200804T0614/GUSTO_results.xlsx). Extensions and updates will follow. 
+
 
 ## References
 <a id="1">[1]</a> 

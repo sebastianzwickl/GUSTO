@@ -61,7 +61,7 @@ Afterwards you can run the model. Therefore open a `Anaconda Propmpt (miniconda3
 ## User guide:
 For the base open-source model urbs a detailed description exists [here](https://github.com/sebastianzwickl/GUSTO/blob/master/User%20guide/urbs.pdf). 
 
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Note that urbs is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
 ## Open data platform and IAMC format
 Data exchange with the open platform and the scenario explorer of the project is supported. This is provided by the [IAMC format](https://pyam-iamc.readthedocs.io/en/latest/examples/index.html) and [pyam](https://github.com/IAMconsortium/pyam). More information is available through the links. 

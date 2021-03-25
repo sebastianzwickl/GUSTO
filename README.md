@@ -58,6 +58,16 @@ At this point it is again pointed out that this model is an extension of the exi
 
 Afterwards you can run the model. Therefore open a `Anaconda Propmpt (miniconda3)` terminal. Use the `cd` command to change the current directiory and open the related one where you find `run_model.py`. Finally type `python run_model.py` to solve the optimization problem. The results can be found in the `Output` folder. 
 
+
+## Scientific publications and ongoing work:
+
+This model is already used in the following two scientific contributions: 
+- *Open-source modeling of a low-carbon urban neighborhood with high shares of local renewable generation* (Applied Energy). [https://doi.org/10.1016/j.apenergy.2020.116166](https://doi.org/10.1016/j.apenergy.2020.116166)
+- *Citizen Participation in Low-Carbon Energy Systems: Energy Communities and Its Impact on the Electricity Demand on Neighborhood and National Level* (Energies). [https://doi.org/10.3390/en14020305](https://doi.org/10.3390/en14020305)
+
+Furthermore, this model is used in an ongoing project together with NTNU. Updates follow soon.
+
+
 ## User guide:
 For the base open-source model urbs a detailed description exists [here](https://github.com/sebastianzwickl/GUSTO/blob/master/User%20guide/urbs.pdf). 
 
